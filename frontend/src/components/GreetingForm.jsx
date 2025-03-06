@@ -12,7 +12,6 @@ const GreetingForm = () => {
             setError("Please enter a name.");
             return;
         }
-
         try {
             const response = await axios.get(`https://youngslab.onrender.com/api/greet?name=${name}`);
             navigate("/greeting", { state: { message: response.data.message } });
