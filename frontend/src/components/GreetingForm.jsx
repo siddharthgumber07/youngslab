@@ -14,7 +14,7 @@ const GreetingForm = () => {
         }
 
         try {
-            const response = await axios.get(`http://localhost:5000/api/greet?name=${name}`);
+            const response = await axios.get(`https://youngslab.onrender.com/api/greet?name=${name}`);
             navigate("/greeting", { state: { message: response.data.message } });
         } catch (error) {
             setError(error.response?.data?.error || "Error fetching greeting.");
